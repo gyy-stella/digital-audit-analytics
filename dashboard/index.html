@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A transparent, full-population digital audit analytics demonstration.">
+  <title>AuditLens — Digital Audit Analytics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">A</span><div><strong>AuditLens</strong><small>ASSURANCE ANALYTICS</small></div></div>
+    <nav>
+      <button class="nav-item active" data-view="overview"><span>⌁</span> Overview</button>
+      <button class="nav-item" data-view="revenue"><span>↗</span> Revenue analytics</button>
+      <button class="nav-item" data-view="journals"><span>≡</span> Journal entry testing</button>
+      <button class="nav-item" data-view="sampling"><span>◎</span> Audit sampling</button>
+    </nav>
+    <div class="scope-card"><span class="pulse"></span><div><small>ENGAGEMENT SCOPE</small><strong>FY2025 · CNY</strong><p>Full population analysis</p></div></div>
+    <p class="sidebar-note">Synthetic demonstration data<br>Not an audit opinion</p>
+  </aside>
+
+  <main>
+    <header>
+      <div><p class="eyebrow">DIGITAL AUDIT ANALYTICS PLATFORM</p><h1 id="page-title">Engagement overview</h1><p id="page-subtitle">Aurora Industrial Automation Co. · FY2025</p></div>
+      <div class="header-actions"><button id="export-btn" class="secondary">Export findings</button><div class="avatar">DA</div></div>
+    </header>
+
+    <section id="overview" class="view active">
+      <div class="notice"><span>i</span><p><strong>Purpose-built audit demonstration.</strong> Analytics prioritize exceptions across complete synthetic populations; professional judgment remains essential.</p></div>
+      <div id="kpis" class="kpi-grid"></div>
+      <div class="grid two-thirds">
+        <article class="panel"><div class="panel-head"><div><p class="eyebrow">REVENUE TREND</p><h2>Monthly recognized revenue</h2></div><span class="legend"><i></i> High-risk value</span></div><div id="revenue-chart" class="chart"></div></article>
+        <article class="panel"><div class="panel-head"><div><p class="eyebrow">RISK PROFILE</p><h2>Population distribution</h2></div></div><div id="risk-donuts" class="donuts"></div></article>
+      </div>
+      <div class="grid half">
+        <article class="panel"><div class="panel-head"><div><p class="eyebrow">REVENUE ASSERTIONS</p><h2>Exceptions by test</h2></div></div><div id="revenue-reasons" class="bars"></div></article>
+        <article class="panel"><div class="panel-head"><div><p class="eyebrow">JOURNAL ENTRY TESTING</p><h2>Exceptions by test</h2></div></div><div id="journal-reasons" class="bars"></div></article>
+      </div>
+    </section>
+
+    <section id="revenue" class="view">
+      <div class="section-intro"><div><p class="eyebrow">FULL-POPULATION TEST</p><h2>Revenue recognition exceptions</h2></div><span class="tag">Occurrence · Cut-off · Accuracy</span></div>
+      <div id="revenue-kpis" class="mini-kpis"></div>
+      <article class="panel table-panel"><div class="panel-head"><div><p class="eyebrow">PRIORITIZED ITEMS</p><h2>Highest-risk transactions</h2></div><input id="revenue-search" type="search" placeholder="Search invoice or customer"></div><div class="table-wrap"><table><thead><tr><th>Transaction</th><th>Customer</th><th>Date</th><th>Amount</th><th>Score</th><th>Risk reason</th><th>Suggested procedure</th></tr></thead><tbody id="revenue-table"></tbody></table></div></article>
+    </section>
+
+    <section id="journals" class="view">
+      <div class="section-intro"><div><p class="eyebrow">MANAGEMENT OVERRIDE</p><h2>Journal entry risk assessment</h2></div><span class="tag">ISA 240 / PCAOB AS 2401 aligned concept</span></div>
+      <div class="grid two-thirds">
+        <article class="panel table-panel"><div class="panel-head"><div><p class="eyebrow">PRIORITIZED ITEMS</p><h2>Unusual journal entries</h2></div></div><div class="table-wrap"><table><thead><tr><th>Journal</th><th>Posted</th><th>Account pair</th><th>Amount</th><th>Score</th><th>Risk reason</th></tr></thead><tbody id="journal-table"></tbody></table></div></article>
+        <article class="panel"><div class="panel-head"><div><p class="eyebrow">DIGITAL ANALYSIS</p><h2>Benford first digits</h2></div></div><div id="benford-chart" class="chart benford"></div><p class="footnote">Benford analysis is a screening signal, not standalone evidence of fraud.</p></article>
+      </div>
+    </section>
+
+    <section id="sampling" class="view">
+      <div class="section-intro"><div><p class="eyebrow">AUDIT RESPONSE</p><h2>Risk-based sampling engine</h2></div><span class="tag">70% targeted · 30% random</span></div>
+      <div class="sampling-flow"><div><b>17,000</b><span>Population records</span></div><i>→</i><div><b id="flagged-count">—</b><span>High-risk exceptions</span></div><i>→</i><div><b>100</b><span>Recommended samples</span></div><i>→</i><div class="accent"><b>Evidence</b><span>Procedure-specific response</span></div></div>
+      <article class="panel methodology"><p class="eyebrow">METHODOLOGY</p><h2>From data signal to audit procedure</h2><div class="method-grid"><div><span>01</span><h3>Define assertions</h3><p>Map each rule to occurrence, cut-off, accuracy or management override risk.</p></div><div><span>02</span><h3>Score transparently</h3><p>Weighted, deterministic rules keep every risk score explainable and reviewable.</p></div><div><span>03</span><h3>Select for coverage</h3><p>Target high-risk records while retaining a random population component.</p></div><div><span>04</span><h3>Design the response</h3><p>Translate each exception into a specific evidence request or substantive procedure.</p></div></div></article>
+    </section>
+  </main>
+  <script src="analytics-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
